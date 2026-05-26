@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites — Book Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sand: "#BCAF9C",
+              blush: "#E8C7DE",
+              plum: "#69626D",
+              linen: "#CBBEB3",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-sand text-gray-900 min-h-screen flex flex-col">
+    <!-- NAVBAR -->
+    <nav class="bg-plum text-white px-6 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Book Explorer</h1>
+
+        <!-- HAMBURGER BUTTON -->
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col gap-1.5 focus:outline-none"
+        >
+          <span class="w-6 h-0.5 bg-white block"></span>
+          <span class="w-6 h-0.5 bg-white block"></span>
+          <span class="w-6 h-0.5 bg-white block"></span>
+        </button>
+
+        <!-- DESKTOP LINKS -->
+        <ul class="hidden md:flex gap-6 text-lg">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li>
+            <a href="favorites.html" class="hover:underline">Favorites</a>
+          </li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+        </ul>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <ul id="mobile-menu" class="hidden flex-col gap-4 mt-4 text-lg md:hidden">
+        <li>
+          <a
+            href="index.html"
+            class="hover:underline block py-2 border-b border-linen"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="favorites.html"
+            class="hover:underline block py-2 border-b border-linen"
+            >Favorites</a
+          >
+        </li>
+        <li>
+          <a href="about.html" class="hover:underline block py-2">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- FAVORITES SECTION -->
+    <section class="w-full px-4 py-12 flex-1">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-extrabold mb-8 text-gray-900">
+          My Favorite Books
+        </h2>
+
+        <!-- empty message -->
+        <p id="empty-message" class="text-gray-800 text-xl font-medium">
+          You have no favorites yet. Go browse some books!
+        </p>
+
+        <!-- favorites grid -->
+        <div
+          id="favorites-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- favorite books will load here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-plum text-white text-center py-6 mt-12">
+      <p class="text-lg">© 2026 Book Explorer.</p>
+    </footer>
+
+    <!-- HAMBURGER SCRIPT -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+      });
+    </script>
+
+    <script type="module" src="js/favorites.js"></script>
+  </body>
+</html>
