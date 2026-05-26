@@ -6,13 +6,26 @@ const booksGrid = document.getElementById("books-grid");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
-// show loading spinner
+// show skeleton loader
 function showLoading() {
-    booksGrid.innerHTML = `
-        <div class="col-span-4 flex justify-center items-center py-20">
-            <div class="w-12 h-12 border-4 border-plum border-t-transparent rounded-full animate-spin"></div>
-        </div>
-    `;
+    let skeletons = "";
+
+    for (let i = 0; i < 12; i++) {
+        skeletons += `
+            <div class="bg-linen rounded-xl shadow p-4 flex flex-col items-center animate-pulse">
+                <!-- fake cover -->
+                <div class="w-32 h-44 bg-sand rounded mb-4"></div>
+                <!-- fake title -->
+                <div class="w-24 h-3 bg-sand rounded mb-2"></div>
+                <!-- fake author -->
+                <div class="w-16 h-3 bg-sand rounded mb-4"></div>
+                <!-- fake button -->
+                <div class="w-28 h-8 bg-sand rounded-full"></div>
+            </div>
+        `;
+    }
+
+    booksGrid.innerHTML = skeletons;
 }
 
 // display books as cards
@@ -72,7 +85,7 @@ window.handleAddToFavorites = function(key, title, author, cover) {
     let btnId = key.replace(/\//g, "");
     let btn = document.getElementById(`btn-${btnId}`);
     if (btn) {
-        btn.innerHTML = "❤️ Added to Favorites";
+        btn.innerHTML = " Added to Favorites";
         btn.classList.add("opacity-70", "cursor-not-allowed");
         btn.disabled = true;
     }
