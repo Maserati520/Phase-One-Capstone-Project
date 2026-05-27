@@ -55,7 +55,8 @@ Simulated real-world GitHub collaboration workflows.
 - localStorage
 - Git & GitHub
 
-## Project Structure
+## 📁 Project Structure
+```
 Phase-One-Capstone-Project/
 │
 ├── index.html          → Homepage
@@ -65,9 +66,10 @@ Phase-One-Capstone-Project/
 ├── README.md
 │
 └── js/
-├── app.js          → Main entry point
-├── fetchBooks.js   → API module
-└── favorites.js    → Favorites module
+    ├── app.js          → Main entry point
+    ├── fetchBooks.js   → API module
+    └── favorites.js    → Favorites module
+```
 
 ## How to Run
 1. Clone the repo
