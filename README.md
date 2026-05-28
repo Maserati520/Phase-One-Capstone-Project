@@ -55,20 +55,24 @@ Simulated real-world GitHub collaboration workflows.
 - localStorage
 - Git & GitHub
 
-## 📁 Project Structure
+##  Project Structure
 ```
 Phase-One-Capstone-Project/
 │
-├── index.html          → Homepage
-├── favorites.html      → Favorites page
-├── about.html          → About page
-├── .gitignore
 ├── README.md
+├── .gitignore
 │
-└── js/
-    ├── app.js          → Main entry point
-    ├── fetchBooks.js   → API module
-    └── favorites.js    → Favorites module
+├── Lab 1/
+│   ├── index.html        → Homepage
+│   ├── favorites.html    → Favorites page
+│   └── about.html        → About page
+│
+├── Lab 2/
+│   ├── app.js            → Main entry point
+│   ├── favorites.js      → Favorites module
+│
+└── Lab 3/
+└── fetchBooks.js     → API module
 ```
 
 ## How to Run
