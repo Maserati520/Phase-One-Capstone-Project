@@ -1,6 +1,6 @@
 // fetchBooks.js
 
-export async function fetchBooks(query = "javascript") {
+export async function fetchBooks(query = "Love") {
 
     try {
 

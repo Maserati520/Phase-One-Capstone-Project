@@ -115,4 +115,4 @@ searchInput.addEventListener("keypress", (e) => {
 });
 
 // load default books on startup
-loadBooks("javascript");
+loadBooks("romance");
