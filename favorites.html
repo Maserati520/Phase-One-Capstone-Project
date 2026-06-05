@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Book Explorer</title>
+    <title>Favorites - Book Explorer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -49,49 +49,20 @@
       </ul>
     </nav>
 
-    <section class="w-full px-4 py-16 flex-1">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-4xl sm:text-5xl font-extrabold mb-8 text-gray-900">
-          About Book Explorer
+    <section class="w-full px-4 py-12 flex-1">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-extrabold mb-8 text-gray-900">
+          My Favorite Books
         </h2>
 
-        <p class="text-xl sm:text-2xl mb-8 leading-relaxed font-medium text-gray-800">
-          Book Explorer is a simple and beautiful web app that lets you
-          discover, search, and save your favorite books from the Open Library -
-          a free and open catalog of millions of books.
+        <p id="empty-message" class="text-gray-800 text-xl font-medium">
+          You have no favorites yet. Go browse some books!
         </p>
 
-        <hr class="border-gray-700 border-2 mb-8" />
-
-        <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">
-          What you can do:
-        </h3>
-        <ul class="space-y-4 text-lg sm:text-xl font-medium">
-          <li class="bg-blush text-gray-900 px-6 py-4 rounded-xl">
-            Browse books from the Open Library API
-          </li>
-          <li class="bg-blush text-gray-900 px-6 py-4 rounded-xl">
-            Search for books by title
-          </li>
-          <li class="bg-blush text-gray-900 px-6 py-4 rounded-xl">
-            Save your favorite books
-          </li>
-          <li class="bg-blush text-gray-900 px-6 py-4 rounded-xl">
-            Use it on any device - fully responsive
-          </li>
-        </ul>
-
-        <hr class="border-gray-700 border-2 my-8" />
-
-        <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">
-          Built with:
-        </h3>
-        <ul class="space-y-4 text-lg sm:text-xl font-medium">
-          <li class="bg-linen text-gray-900 px-6 py-4 rounded-xl">HTML & CSS</li>
-          <li class="bg-linen text-gray-900 px-6 py-4 rounded-xl">Tailwind CSS</li>
-          <li class="bg-linen text-gray-900 px-6 py-4 rounded-xl">Vanilla JavaScript</li>
-          <li class="bg-linen text-gray-900 px-6 py-4 rounded-xl">Open Library API</li>
-        </ul>
+        <div
+          id="favorites-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        ></div>
       </div>
     </section>
 
@@ -108,5 +79,7 @@
         mobileMenu.classList.toggle("flex");
       });
     </script>
+
+    <script type="module" src="js/favorites.js"></script>
   </body>
 </html>

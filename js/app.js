@@ -1,4 +1,4 @@
-import { fetchBooks } from "../Lab 3/fetchBooks.js";
+import { fetchBooks } from "./fetchBooks.js";
 import { addToFavorites } from "./favorites.js";
 
 const booksGrid = document.getElementById("books-grid");
